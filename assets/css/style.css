@@ -15,7 +15,8 @@ body {
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="date"] {
     font-size: 1rem;
     width: calc(100% - 20px);
     padding: 10px;
