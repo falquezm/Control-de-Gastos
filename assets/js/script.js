@@ -4,7 +4,11 @@ function agregarGasto() {
     let fechaGasto = document.getElementById('fechaGasto').value;
     let nombreGasto = document.getElementById('nombreGasto').value;
     let descripcionGasto = document.getElementById('descripcionGasto').value;
-    let valorGasto = document.getElementById('valorGasto').value;
+    let valorGasto = Number(document.getElementById('valorGasto').value).toFixed(2);
+
+    if (valorGasto > 150){
+        alert("El gasto resgistrado es mayor a USD $150 ")
+    }
 
     listaGastos.push([fechaGasto,nombreGasto,descripcionGasto,Number(valorGasto).toFixed(2)]);
     actualizarListaGastos();
